@@ -17,7 +17,7 @@ public class GraphHopperController {
     }
 
     @GetMapping("/findRoute")
-    public JsonNode findRoute(@RequestParam String startPoint, @RequestParam String endPoint) {
-        return graphHopperRequestService.route(startPoint, endPoint);
+    public JsonNode findRoute(@RequestParam String startPoint, @RequestParam String endPoint, @RequestParam String graphhopperApiKey) {
+        return graphHopperRequestService.route(startPoint, endPoint, graphhopperApiKey);
     }
 }
